@@ -27,7 +27,7 @@ public class CourseService {
     }
 
     public void deleteCourseById(int id) {
-        courseRepo.softDeleteById(id);
+        courseRepo.deleteById(id);
     }
 
     public Integer getLastCourseId() {
