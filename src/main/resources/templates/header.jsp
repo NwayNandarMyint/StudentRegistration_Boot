@@ -18,7 +18,7 @@
 	<div>
 		<a href="/" class="btn btn-success">Add Course </a>
 		<a href="/displayCourses" class="btn btn-success"> All Courses</a>
-		<a href="/" class="btn btn-success">Add Student </a>
+		<a href="/addStudent" class="btn btn-success">Add Student </a>
 		<a href="/" class="btn btn-success">All Students </a>
 
 	</div>
