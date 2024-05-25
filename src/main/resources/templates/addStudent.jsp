@@ -114,13 +114,55 @@
             					<input type="text" class="form-control" id="phone" th:field="*{phone}" placeholder="Phone Number">
             				</div>
             </div>
-            			<div class="row mb-4">
+            <div class="row mb-4">
                         				<div class="col-md-2"></div>
                         				<label for="dob" class="col-md-2 col-form-label">Date of Birth</label>
                         				<div class="col-md-4">
-                        					<input type="text" class="form-control" id="dob" th:field="*{dob}"  placeholder="Birthday">
+                        					<input type="date" class="form-control" id="dob" th:field="*{dob}"  placeholder="Birthday">
                         				</div>
-                        			</div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-2"></div>
+                <label class="col-form-label col-md-2 pt-0">Gender</label>
+                <div class="col-md-4">
+                    <div class="form-check-inline">
+                        <input type="radio" th:field="*{gender}" value="Male"/> Male
+                    </div>
+                    <div class="form-check-inline">
+                        <input type="radio" th:field="*{gender}" value="Female"/> Female
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+            				<div class="col-md-2"></div>
+            				<label for="name" class="col-md-2 col-form-label">Education</label>
+            				<div class="col-md-4">
+            					<input type="textarea" class="form-control" th:field="*{education}" placeholder="Your Education">
+            				</div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-2"></div>
+                <label for="photo" class="col-md-2 col-form-label">Photo</label>
+                <div class="col-md-4">
+                    <input type="file" th:field="*{photo}" class="form-control" id="file" accept="image/*" required="required"/>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-2"></div>
+                <label for="courses" class="col-form-label col-md-2 pt-0">Attend</label>
+
+                <div class="col-md-4" style="color:black;">
+                    <div th:each="course : ${courses}">
+                        <div class="form-check">
+                            <input type="checkbox" th:field="*{courses}" th:value="${course.id}" class="form-check-input" />
+                            <label th:text="${course.name}" class="form-check-label"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 			<div class="row mb-4">
 				<div class="col-md-4"></div>
 				<div class="col-md-6">
